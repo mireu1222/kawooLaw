@@ -17,7 +17,7 @@ function gnbOpen() {
     gnb.before(dim);
     setTimeout(function(){
         gnb.addClass('m-open');
-    }, 50);
+    }, 20);
 }
 function gnbClose() {
     var gnb = $('#gnb');
@@ -28,15 +28,18 @@ function gnbClose() {
     $('header .gnb-dim').remove();
     setTimeout(function(){
         gnb.hide();
-    }, 250);
+    }, 300);
 }
 function headerEvt() {
-    // pc hover
-    $('#gnb').mouseenter(function(){
-        $('header').addClass('open');
-    });
-    $('header').mouseleave(function(){
-        $('header').removeClass('open');
+    // pc sitemap click
+    $('header .btn-sitemap').click(function(){
+        if ($(this).hasClass('open')){
+            $('header').removeClass('sitemap');
+            $(this).removeClass('open');
+        } else {
+            $('header').addClass('sitemap');
+            $(this).addClass('open');
+        }
     });
     // mobile click
     $('header .btn-menu-all').click(function(){
@@ -45,9 +48,9 @@ function headerEvt() {
     // mobile gnb toggle
     $('#gnb .btn-depth-more').click(function(){
         var self = $(this);
-        var depth = self.siblings('ul.depth2-list');
+        var depth = self.siblings('ul.depth2');
         var allBtn = $('#gnb .btn-depth-more');
-        var allDepth = $('#gnb ul.depth2-list');
+        var allDepth = $('#gnb ul.depth2');
 
         if (self.hasClass('open')){
             depth.slideUp();

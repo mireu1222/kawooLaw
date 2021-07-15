@@ -1,25 +1,48 @@
 /* button */
 .btn {
     display:inline-block;
-    padding:0 14px;
+    padding:0 10px;
     border:1px solid transparent;
     background:transparent;
     font-size:16px;
-    line-height:38px;
+    line-height:48px;
     vertical-align:top;
     cursor:pointer;
     transition:$btn-transition;
     white-space:nowrap;
     text-align:center;
-    @include mobile {
-        font-size:14px;
-    }
     span {
         display:inline-block;
         vertical-align:top;
     }
     &.radius {
         border-radius:8px;
+    }
+    &.icon-go {
+        span {
+            position:relative;
+            padding-right:34px;
+            &::before {
+                content:' ';
+                position:absolute;
+                top:50%;
+                right:0;
+                width:24px;
+                height:1px;
+                background:currentColor;
+            }
+            &::after {
+                content:' ';
+                position:absolute;
+                top:50%;
+                right:0;
+                width:11px;
+                height:1px;
+                margin-top:-4px;
+                background:currentColor;
+                transform:rotate(40deg);
+            }
+        }
     }
     // style
     @each $color, $value, $ratio in $colors {

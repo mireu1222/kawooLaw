@@ -74,11 +74,11 @@
 }
 
 // font family
-@mixin font-noto {
-    font-family: "Noto Sans KR" !important;
+@mixin font-serif {
+    font-family: "Noto Serif KR", serif !important;
 }
-@mixin font-pen {
-    font-family: "Nanum Pen Script" !important;
+@mixin font-brush {
+    font-family: "Nanum Brush Script", cursive !important;
 }
 
 // text ellipsis
