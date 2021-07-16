@@ -1,0 +1,236 @@
+/* 구성원 */
+.lawyer-view {
+    display:flex;
+    @include mobile {
+        display:block;
+        position:relative;
+    }
+    .photo {
+        @include calcs(width, 510px, 1280px);
+        @include mobile {
+            position:absolute;
+            top:0;
+            left:0;
+            width:120px;
+            height:150px;
+            overflow:hidden;
+        }
+    }
+    .cont {
+        @include calcs(width, 700px, 1280px);
+        margin-left:auto;
+        @include mobile {
+            width:100%;
+        }
+        .head {
+            padding-bottom:30px;
+            border-bottom:1px solid #333;
+            @include mobile {
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                height:180px;
+                padding-left:140px;
+            }
+            h4.name {
+                display:flex;
+                align-items:flex-end;
+                font-size:26px;
+                font-weight:700;
+                small {
+                    order:2;
+                    margin-left:20px;
+                    font-size:24px;
+                    font-weight:100;
+                }
+                @include mobile {
+                    font-size:20px;
+                    flex-direction:column;
+                    align-items:flex-start;
+                    small {
+                        margin-left:0;
+                        margin-top:10px;
+                        font-size:16px;
+                    }
+                }
+            }
+            dl.mail {
+                display:flex;
+                margin-top:20px;
+                font-size:18px;
+                color:#666;
+                dt {
+                    margin-right:15px;
+                    color:#333;
+                }
+                @include mobile {
+                    display:block;
+                    font-size:15px;
+                    dt {
+                        margin-bottom:5px;
+                    }
+                }
+            }
+        }
+        .body {
+            .sect {
+                margin-top:30px;
+                padding-top:30px;
+                border-top:1px solid $border;
+                @include mobile {
+                    margin-top:20px;
+                    padding-top:20px;
+                }
+                &:first-child {
+                    margin-top:0;
+                    border-top:none;
+                }
+                h5.tit {
+                    margin-bottom:10px;
+                    @include font-md;
+                    font-weight:500;
+                }
+                ul.lists li {
+                    margin-top:3px;
+                    color:#666;
+                    @include font;
+                    &:first-child {
+                        margin-top:0;
+                    }
+                    &.flex {
+                        display:flex;
+                        align-items:flex-start;
+                        span {
+                            &:first-child {
+                                @include textEllipsis;
+                            }
+                            &:last-child {
+                                color:$point;
+                                white-space:nowrap;
+                                &::before {
+                                    content:' ';
+                                    display:inline-block;
+                                    vertical-align:top;
+                                    width:1px;
+                                    height:10px;
+                                    margin:9px 10px 0;
+                                    background:$border;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.lawyer-lists {
+    overflow:hidden;
+    ul.lists {
+        display:flex;
+        flex-wrap:wrap;
+        @include calcs(margin-top, -60px, 1280px);
+        @include calcs(margin-left, -40px, 1280px);
+        > li {
+            width:25%;
+            @include calcs(margin-top, 60px, 1320px);
+            @include calcs(padding-left, 40px, 1320px);
+            @include tablet {
+                width:33.3%;
+            }
+            @include mobile {
+                width:50%;
+            }
+            a:hover {
+                .thumb {
+                    &::before {
+                        content:' ';
+                        position:absolute;
+                        top:0;
+                        left:0;
+                        width:100%;
+                        height:100%;
+                        background:rgba(#000, 0.6);
+                    }
+                    &::after {
+                        content:'자세히 보기 〉';
+                        position:absolute;
+                        top:50%;
+                        left:50%;
+                        transform:translate(-50%, -50%);
+                        color:#fff;
+                        font-size:16px;
+                    }
+                }
+            }
+            a,
+            div.inner {
+                display:block;
+                padding-bottom:25px;
+                text-align:center;
+                @include mobile {
+                    padding-bottom:15px;
+                }
+                .thumb {
+                    position:relative;
+                    display:block;
+                    margin-bottom:25px;
+                    @include mobile {
+                        margin-bottom:15px;
+                    }
+                }
+                .category {
+                    margin-bottom:10px;
+                    color:$point;
+                    font-size:16px;
+                    line-height:24px;
+                    font-weight:500;
+                    word-break:keep-all;
+                    @include mobile {
+                        font-size:14px;
+                        line-height:20px;
+                    }
+                }
+                .name {
+                    text-align:center;
+                    font-size:24px;
+                    font-weight:500;
+                    small {
+                        display:block;
+                        margin-bottom:10px;
+                        font-size:18px;
+                        line-height:20px;
+                        font-weight:400;
+                        word-break:keep-all;
+                    }
+                    @include mobile {
+                        font-size:18px;
+                        small {
+                            font-size:15px;
+                            line-height:18px;
+                        }
+                    }
+                    span {
+                        font-weight:400;
+                        font-size:18px;
+                        margin-left:4px;
+                        @include mobile {
+                            font-size:15px;
+                        }
+                    }
+                }
+                .infos {
+                    margin-top:20px;
+                    @include mobile {
+                        margin-top:10px;
+                    }
+                    li {
+                        color:#666;
+                        @include font;
+                    }
+                }
+            }
+        }
+    }
+}

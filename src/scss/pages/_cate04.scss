@@ -1,0 +1,218 @@
+/* 법률서비스 */
+.sub04 {
+    .num-cont {
+        display:flex;
+        align-items:center;
+        @include mobile {
+            flex-direction:column;
+        }
+        .bg {
+            display:block;
+            @include calcs(width, 500px, 1280px);
+            @include calcs(padding-top, 340px, 1280px);
+            background-size:cover;
+            background-repeat:no-repeat;
+            background-position:center;
+            &.bg01 {
+                background-image:url('/images/img/img-sub0401.jpg');
+            }
+            &.bg02 {
+                background-image:url('/images/img/img-sub0402.jpg');
+            }
+            @include mobile {
+                width:100%;
+                @include calcs(padding-top, 340px, 500px);
+            }
+        }
+        ul {
+            @include calcs(width, 740px, 1280px);
+            margin-left:auto;
+            @include mobile {
+                width:100%;
+                margin-top:20px;
+            }
+            li {
+                position:relative;
+                margin-top:35px;
+                padding-left:40px;
+                @include font-md;
+                word-break:keep-all;
+                @include mobile {
+                    margin-top:15px;
+                }
+                &:first-child {
+                    margin-top:0;
+                }
+                &::before {
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    color:$point;
+                }
+                @for $i from 1 through 4 {
+                    &:nth-child(#{$i})::before {
+                        content:'0#{$i}';
+                    }
+                }
+                &.no-num {
+                    padding-left:0;
+                    &::before {
+                        display:none;
+                    }
+                    .btn {
+                        width:240px;
+                        @include mobile {
+                            width:100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .info-cont {
+        width:1160px;
+        margin:80px auto 0;
+        @include tablet {
+            width:100%;
+            margin-top:50px;
+        }
+        ul {
+            display:flex;
+            @include tablet {
+                flex-wrap:wrap;
+            }
+            li {
+                width:calc((100% + 120px) / 4);
+                margin-left:-40px;
+                &:first-child {
+                    margin-left:0;
+                }
+                &:nth-child(1) {
+                    .inner {
+                        background:#ccc;
+                        border-radius:50% 50% 50% 0;
+                    }
+                }
+                &:nth-child(2) {
+                    .inner {
+                        background:#55b8d0;
+                    }
+                }
+                &:nth-child(3) {
+                    .inner {
+                        background:#92cdff;
+                    }
+                }
+                &:nth-child(4) {
+                    .inner {
+                        background:#4886d9;
+                        border-radius:50% 0 50% 50%;
+                    }
+                }
+                @include tablet {
+                    width:calc((100% + 40px) / 2);
+                    &:nth-child(3) {
+                        margin-left:0;
+                    }
+                    &:nth-child(2) ~ li {
+                        margin-top:-40px;
+                    }
+                }
+                @include mobile {
+                    width:100%;
+                    margin-left:0;
+                    margin-top:-40px;
+                    &:first-child {
+                        margin-top:0;
+                    }
+                }
+                .inner {
+                    position:relative;
+                    width:100%;
+                    padding-top:100%;
+                    border-radius:50%;
+                    .text {
+                        position:absolute;
+                        top:70px;
+                        left:40px;
+                        right:40px;
+                        color:#fff;
+                        text-align:center;
+                        @include tablet {
+                            top:100px;
+                        }
+                        @include mobile {
+                            top:calc((100% + 20px) / 2);
+                            transform:translateY(-50%);
+                            left:20px;
+                            right:20px;
+                        }
+                        .tit {
+                            position:relative;
+                            font-size:24px;
+                            font-weight:500;
+                            @include mobile {
+                                font-size:18px;
+                            }
+                            &::after {
+                                content:' ';
+                                display:block;
+                                width:70px;
+                                height:70px;
+                                margin:10px auto;
+                                background-repeat:no-repeat;
+                                background-size:100%;
+                                background-position:center;
+                            }
+                            &.icon01::after {
+                                background-image:url('/images/icon/icon-sub0401-1.png');
+                            }
+                            &.icon02::after {
+                                background-image:url('/images/icon/icon-sub0401-2.png');
+                            }
+                            &.icon03::after {
+                                background-image:url('/images/icon/icon-sub0401-3.png');
+                            }
+                            &.icon04::after {
+                                width:205px;
+                                background-image:url('/images/icon/icon-sub0401-4.png');
+                            }
+                        }
+                        .num {
+                            font-size:30px;
+                            font-weight:900;
+                            @include mobile {
+                                font-size:24px;
+                            }
+                        }
+                        .desc {
+                            margin-top:10px;
+                            font-size:18px;
+                            line-height:20px;
+                            font-weight:500;
+                            word-break:keep-all;
+                            @include mobile {
+                                font-size:16px;
+                                line-height:18px;
+                            }
+                        }
+                        .btn-go {
+                            display:block;
+                            width:60px;
+                            height:60px;
+                            margin:10px auto;
+                            border-radius:50%;
+                            background:#666;
+                            color:#fff;
+                            font-size:18px;
+                            line-height:60px;
+                            font-weight:500;
+                            text-align:center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

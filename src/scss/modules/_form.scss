@@ -277,6 +277,11 @@
             width:50px;
             height:50px;
             background:$basic url('/images/icon/icon-search.png') center no-repeat;
+            @include mobile {
+                width:40px;
+                height:40px;
+                background-size:20px;
+            }
         }
     }
 }
@@ -343,7 +348,9 @@
         line-height:48px;
         @include mobile {
             width:90px;
+            height:40px;
             margin-left:5px;
+            line-height:38px;
         }
     }
 }

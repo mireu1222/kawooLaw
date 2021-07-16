@@ -1,0 +1,454 @@
+/* 법무법인소개 */
+.sub0101 {
+    .thumb {
+        display:block;
+    }
+    .text {
+        margin:60px 0;
+        text-align:center;
+        @include mobile {
+            margin:40px 0;
+        }
+        .tit {
+            font-size:24px;
+            small {
+                display:block;
+                margin-bottom:20px;
+                font-size:18px;
+                font-weight:500;
+                color:$point;
+                letter-spacing:4px;
+            }
+            @include mobile {
+                font-size:20px;
+                small {
+                    margin-bottom:15px;
+                    font-size:15px;
+                }
+            }
+        }
+        .desc {
+            max-width:670px;
+            margin:35px auto 55px;
+            @include font-md;
+            color:#666;
+            word-break:keep-all;
+            @include mobile {
+                margin:20px auto 35px;
+            }
+        }
+    }
+    .img-wrap {
+        display:flex;
+        max-width:1000px;
+        margin:0 auto;
+        @include mobile {
+            flex-wrap:wrap;
+        }
+        li {
+            @include calcs(width, 220px, 1000px);
+            @include calcs(margin-left, 30px, 1000px);
+            box-shadow:$boxshadow;
+            &.big {
+                @include calcs(width, 474px, 1000px);
+                margin-left:0;
+                margin-right:auto;
+            }
+            @include mobile {
+                width:calc((100% - 10px) / 2);
+                margin-left:0;
+                &:last-child {
+                    margin-left:10px;
+                }
+                &.big {
+                    width:100%;
+                    margin-bottom:10px;
+                }
+            }
+        }
+    }
+}
+
+.sub0102 {
+    h4.tit {
+        margin-bottom:80px;
+        text-align:center;
+        font-size:26px;
+        font-weight:500;
+        @include mobile {
+            margin-bottom:30px;
+            font-size:20px;
+        }
+    }
+    .hello {
+        display:flex;
+        @include mobile {
+            flex-direction:column;
+        }
+        .photo {
+            width:50%;
+            padding-right:40px;
+            @include mobile {
+                width:100%;
+                padding-right:0;
+            }
+        }
+        .text {
+            position:relative;
+            width:50%;
+            @include mobile {
+                width:100%;
+                margin-bottom:20px;
+                order:-1;
+            }
+            &::before {
+                content:'KAWOO';
+                display:block;
+                margin-bottom:80px;
+                color:$point;
+                font-size:22px;
+                font-weight:500;
+                letter-spacing:4px;
+                @include mobile {
+                    display:none;
+                }
+            }
+            &::after {
+                content:' ';
+                position:absolute;
+                top:60px;
+                left:0;
+                width:40px;
+                height:2px;
+                background:$point;
+                @include mobile {
+                    display:none;
+                }
+            }
+            p {
+                color:#666;
+                @include font-md;
+                word-break:keep-all;
+                &.name {
+                    margin-top:35px;
+                    color:#333;
+                    line-height:45px;
+                    @include mobile {
+                        margin-top:20px;
+                        line-height:35px;
+                        text-align:right;
+                    }
+                    span {
+                        margin-left:10px;
+                        font-size:45px;
+                        vertical-align:top;
+                        @include mobile {
+                            font-size:35px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sub0103 {
+    .tit-wrap {
+        position:relative;
+        padding-top:70px;
+        text-align:center;
+        overflow:hidden;
+        @include mobile {
+            padding-top:30px;
+        }
+        &::before {
+            content:'VISION';
+            position:absolute;
+            top:-24px;
+            left:50%;
+            transform:translateX(-50%);
+            font-size:150px;
+            font-weight:700;
+            color:rgba(#1965b0, 0.1);
+            letter-spacing:14px;
+            @include mobile {
+                top:-11px;
+                font-size:70px;
+                letter-spacing:10px;
+            }
+        }
+        h4.tit {
+            @include font-title;
+            word-break:keep-all;
+            @include mobile {
+                padding:0 20px;
+            }
+            em {
+                display:block;
+                font-weight:700;
+                @include mobile {
+                    display:inline;
+                }
+            }
+        }
+        .desc {
+            margin-top:20px;
+            @include font-md;
+            word-break:keep-all;
+        }
+    }
+    .vision-lists {
+        margin-top:80px;
+        @include mobile {
+            margin-top:40px;
+        }
+        li {
+            display:flex;
+            align-items:center;
+            margin-top:60px;
+            @include mobile {
+                flex-direction:column;
+                margin-top:30px;
+            }
+            &.type2 {
+                .thumb {
+                    order:2;
+                    @include mobile {
+                        order:-1;
+                    }
+                }
+                .text {
+                    margin-left:0;
+                    margin-right:auto;
+                    text-align:right;
+                    h5.tit::after {
+                        margin-left:auto;
+                    }
+                    .desc {
+                        &.bold {
+                            margin-left:auto;
+                        }
+                    }
+                }
+            }
+            .thumb {
+                @include calcs(width, 550px, 1280px);
+                @include calcs(padding-top, 340px, 1280px);
+                background-size:cover;
+                background-repeat:no-repeat;
+                background-position:center;
+                @for $i from 1 through 3 {
+                    &.thumb0#{$i} {
+                        background-image:url('/images/img/img-sub0103-#{$i}.jpg');
+                    }
+                }
+                @include mobile {
+                    width:100%;
+                    padding-top:40%;
+                    margin-bottom:20px;
+                }
+            }
+            .text {
+                @include calcs(width, 680px, 1280px);
+                margin-left:auto;
+                @include mobile {
+                    width:100%;
+                }
+                h5.tit {
+                    font-size:22px;
+                    color:$point;
+                    font-weight:500;
+                    letter-spacing:4px;
+                    @include mobile {
+                        font-size:18px;
+                        text-align:center;
+                    }
+                    &::after {
+                        content:' ';
+                        display:block;
+                        width:40px;
+                        height:2px;
+                        margin:40px 0 30px;
+                        background:$point;
+                        @include mobile {
+                            margin:15px auto 10px;
+                        }
+                    }
+                    span {
+                        letter-spacing:4px;
+                        &::before {
+                            content:' ';
+                            display:inline-block;
+                            vertical-align:top;
+                            width:1px;
+                            height:18px;
+                            margin:2px 10px 0 6px;
+                            background:#ddd;
+                        }
+                    }
+                }
+                .desc {
+                    color:#666;
+                    @include font;
+                    word-break:keep-all;
+                    &.bold {
+                        max-width:370px;
+                        margin-bottom:10px;
+                        font-weight:500;
+                        color:#333;
+                    }
+                    @include mobile {
+                        text-align:center;
+                        &.bold {
+                            margin-bottom:5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sub0104 {
+    .map-wrap {
+        .root_daum_roughmap {
+            width:100%;
+            .wrap_map {
+                height:500px;
+                @include tablet {
+                    height:300px;
+                }
+            }
+            .map_border {
+                display:none !important;
+            }
+            .wrap_controllers {
+                display:none !important;
+            }
+        }
+    }
+    .addr {
+        margin-top:40px;
+        padding-bottom:20px;
+        border-bottom:1px solid $border;
+        .tit {
+            font-size:24px;
+            font-weight:700;
+            @include mobile {
+                font-size:20px;
+            }
+        }
+        .desc {
+            margin-top:10px;
+            @include font-md;
+            word-break:keep-all;
+        }
+    }
+    .contact-lists {
+        margin-top:30px;
+        font-size:0;
+        li {
+            display:inline-block;
+            vertical-align:top;
+            margin-right:50px;
+            @include tablet {
+                margin-right:20px;
+            }
+            @include mobile {
+                width:100%;
+                margin-right:0;
+                margin-top:15px;
+                &:first-child {
+                    margin-top:0;
+                }
+            }
+            &::before {
+                content:' ';
+                display:inline-block;
+                vertical-align:middle;
+                width:36px;
+                height:36px;
+                margin-right:10px;
+                border-radius:50%;
+                color:#fff;
+                font-size:20px;
+                text-align:center;
+                line-height:36px;
+                font-weight:700;
+                @include mobile {
+                    font-size:16px;
+                }
+            }
+            &:nth-child(1)::before {
+                content:'T';
+                background:#be005c;
+            }
+            &:nth-child(2)::before {
+                content:'F';
+                background:#3b66a8;
+            }
+            &:nth-child(3)::before {
+                content:'M';
+                background:#49bac7;
+            }
+            p {
+                display:inline-block;
+                vertical-align:middle;
+                font-size:20px;
+                font-weight:700;
+                @include mobile {
+                    font-size:16px;
+                }
+            }
+        }
+    }
+    .how-lists {
+        display:flex;
+        margin-top:40px;
+        @include mobile {
+            display:block;
+        }
+        li {
+            flex:1;
+            margin-left:20px;
+            padding:45px 12px 40px 130px;
+            background:#f5f5f5;
+            background-position:40px 50px;
+            background-repeat:no-repeat;
+            @include mobile {
+                margin-left:0;
+                margin-top:20px;
+                padding:20px 12px 20px 80px;
+                background-size:45px;
+                background-position:20px 30px;
+            }
+            &:first-child {
+                margin-left:0;
+                margin-top:0;
+                background-image:url('/images/icon/icon-sub0104-1.png');
+            }
+            &:nth-child(2) {
+                background-image:url('/images/icon/icon-sub0104-2.png');
+            }
+            .tit {
+                margin-bottom:15px;
+                font-size:20px;
+                font-weight:700;
+            }
+            .desc {
+                @include font;
+                word-break:keep-all;
+                &.bar {
+                    padding-left:10px;
+                    &::before {
+                        content:'-';
+                        display:inline-block;
+                        vertical-align:top;
+                        margin-left:-10px;
+                        width:10px;
+                    }
+                }
+            }
+        }
+    }
+}

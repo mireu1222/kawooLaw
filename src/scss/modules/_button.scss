@@ -11,6 +11,10 @@
     transition:$btn-transition;
     white-space:nowrap;
     text-align:center;
+    @include mobile {
+        font-size:14px;
+        line-height:38px;
+    }
     span {
         display:inline-block;
         vertical-align:top;

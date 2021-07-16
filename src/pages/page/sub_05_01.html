@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="container" class="container cate05">
+            @@include('./layout/page-title.html', {
+                cate05 : '01'
+            })
+            <div class="contents-area">
+                <h3 class="cont-title">상담안내</h3>
+                <div class="sub0501">
+                    <h4 class="tit">변호상담 및 의뢰절차</h4>
+                    <div class="box">
+                        <h5 class="tit">상담 및 예약</h5>
+                        <div class="flex">
+                            <div class="col line">
+                                <div class="row">
+                                    <p>전화예약<br>02-2956-0297</p>
+                                </div>
+                                <div class="row">
+                                    <p>온라인상담(예약)<small>* PC웹/카카오톡</small></p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <p>상담의뢰서 작성<small>* 온라인</small></p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="col line">
+                                <div class="row">
+                                    <p>변호사 119</p>
+                                </div>
+                                <div class="row">
+                                    <p>나홀로 송무(소송)</p>
+                                </div>
+                                <div class="row">
+                                    <p>법률주치의<br>개인전담 변호사</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <h6 class="tit">대면상담</h6>
+                                <p>위치<br>가우 법무법인 상담실<a href="/page/sub_01_04.html" class="link-point">찾아오시는 길</a></p>
+                            </div>
+                            <div class="col">
+                                <h6 class="tit">찾아가는 대면상담</h6>
+                                <p>위치<br>의뢰인의 희망 장소</p>
+                            </div>
+                            <div class="col">
+                                <h6 class="tit">비대면 상담(24시간)</h6>
+                                <p>- 줌(ZOOM) 상담<br>- 카카오톡 상담</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <h5 class="tit">상담 및 예약완료</h5>
+                        <div class="flex type2">
+                            <div class="col"><p>정식선임계약</p></div>
+                            <div class="col"><p>변호사 그룹전략회의 및 담당 변호사 지정</p></div>
+                            <div class="col"><p>사건진행</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

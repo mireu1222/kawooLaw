@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="container" class="container cate02">
+            @@include('./layout/page-title.html', {
+                cate02 : '02'
+            })
+            <div class="contents-area">
+                <h3 class="cont-title">형사</h3>
+                <div class="sub02">
+                    <h4 class="tit bg02">법무법인 가우는 신뢰할 수 있는 동반자로서 실효성 있는 법률서비스를 적시에 제공합니다.</h4>
+                    <div class="text-cont">
+                        <div class="box">
+                            <h5 class="tit">형사</h5>
+                            <p class="desc">
+                                형사사건의 당사자가 되신 고객들의 고통을 나누고 소통하겠습니다. 경찰, 검찰 수사단계에서의 대응, 구속적부심&middot;보석신청, 재판 과정에서의 변론에 이르기까지 성심을 다하여 형사사건의 시작과 끝을 함께하면서 고객 여러분에게 형사절차에서 억울함이 조금도 남지 않도록 도와드릴 것입니다.
+                            </p>
+                        </div>
+                        <div class="box">
+                            <h5 class="tit">업무소개</h5>
+                            <ul class="bullet-list">
+                                <li>수사단계의 법률자문 및 변호</li>
+                                <li>구속영장실질심사의 변호</li>
+                                <li>구속적부심사의 변호</li>
+                                <li>공판단계의 변호</li>
+                                <li>보석청구사건의 변호</li>
+                                <li>항소심, 상고심 사건의 변호</li>
+                                <li>재심사건의 변호</li>
+                                <li>고소사건 대리 및 재정신청사건 대리</li>
+                            </ul>
+                        </div>
+                        <div class="box">
+                            <h5 class="tit">주요사례</h5>
+                            <ul class="bullet-list">
+                                <li>방배13구역 주택재건축정비사업조합 관련 사건</li>
+                                <li>미아뉴타운지구 제12구역 주택재개발정비사업조합 관련 사건</li>
+                                <li>인천산곡6주택재개발정비사업조합 조합총회결의무효확인 사건 등</li>
+                                <li>재건축조합 일괄매도청구 및 현금청산청구 사건</li>
+                                <li>재건축조합 일괄명도청구 관련 사건</li>
+                                <li>재건축&middot;재개발 관련 처분, 총회의결, 수용재결, 조합원지위확인 등 관련 사건</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

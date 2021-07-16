@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="container" class="container cate01">
+            @@include('./layout/page-title.html', {
+                cate01 : '02'
+            })
+            <div class="contents-area">
+                <h3 class="cont-title">인사말</h3>
+                <div class="sub0102">
+                    <h4 class="tit">법무법인 가우는 '아름다운 벗'입니다.</h4>
+                    <div class="hello">
+                        <div class="photo"><img src="/images/img/img-hello.jpg" alt=""></div>
+                        <div class="text">
+                            <p>
+                                안녕하세요.<br>
+                                항상 의뢰인에게 다가가는 변호사 이경환입니다.<br>
+                                지난 20여년 이상의 변호사 생활동안 민형사소송, 기업 M&amp;A, 부동산, 조세 등 다양한 분야의 법률 업무를 수행하였지만, 특히 지금도 기억나는 것은 "한국 납세자연맹 법률지원단장"으로서 학교용지 부담금 관련 집단소송 등 서민의 권일을 위한 공익소송을 진행하면서 수십만명의 사람들에게 학교용지 부담금을 환급 받을 수 있도록 한 것입니다.<br>
+                                또한 오래전부터 건국대 부동산 대학원을 수료하고 강의를 직접 하는 등 특히 부동산 분야에서 전문화된 지식과 경력을 쌓아가고 있습니다.<br>
+                                항상 의뢰인에게 다가가는 변호사, 신회받는 변호사.<br>
+                                무엇보다 소송에서 이기는 법률그룹이 되기 위해 열심히 뛰겠습니다.<br>
+                                감사합니다.
+                            </p>
+                            <p class="name">대표변호사 <span class="ft-brush">이경환</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

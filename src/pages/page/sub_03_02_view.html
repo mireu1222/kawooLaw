@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="container" class="container cate03">
+            @@include('./layout/page-title.html', {
+                cate03 : '02'
+            })
+            <div class="contents-area">
+                <h3 class="cont-title">소속변호사</h3>
+                <div class="lawyer-view">
+                    <div class="photo"><img src="/images/img/img-pp2.jpg" alt=""></div>
+                    <div class="cont">
+                        <div class="head">
+                            <h4 class="name"><small>형사전문 대표변호사</small>이 경 환</h4>
+                        </div>
+                        <div class="body">
+                            <div class="sect">
+                                <h5 class="tit">자격</h5>
+                                <ul class="lists">
+                                    <li>사법시험(제47회, 2005)</li>
+                                    <li>사법연수원(제37기)</li>
+                                    <li>세무사시험(제50회)</li>
+                                    <li>미국공인회계사시험(2010)</li>
+                                    <li>대한변호사협회 형사전문변호사  </li>
+                                </ul>
+                            </div>
+                            <div class="sect">
+                                <h5 class="tit">학력</h5>
+                                <ul class="lists">
+                                    <li>상문고등학교</li>
+                                    <li>성균관대학교 법학과</li>
+                                    <li>성균관대학교 법과대학원(조세법 전공)</li>
+                                </ul>
+                            </div>
+                            <div class="sect">
+                                <h5 class="tit">경력</h5>
+                                <ul class="lists">
+                                    <li>대한법률구조공단 법무관</li>
+                                    <li>법무법인 정세 변호사</li>
+                                    <li>법무법인 가교 변호사</li>
+                                    <li>법무법인 한음 대표변호사</li>
+                                    <li>국세청 본청 국선세무대리인</li>
+                                    <li>서울세관 징계위원회 위원</li>
+                                    <li>한국수자원공사 인사위원회 전문위원</li>
+                                    <li>경상남도 법률자문위원</li>
+                                </ul>
+                            </div>
+                            <div class="sect">
+                                <h5 class="tit">우수 성공사례</h5>
+                                <ul class="lists">
+                                    <li class="flex">
+                                        <span>준유사강간</span>
+                                        <span>집행유예</span>
+                                    </li>
+                                    <li class="flex">
+                                        <span>아동&middot;청소년 유사성행위</span>
+                                        <span>구속 영장 기각</span>
+                                    </li>
+                                    <li class="flex">
+                                        <span>강제추행</span>
+                                        <span>혐의없음</span>
+                                    </li>
+                                    <li class="flex">
+                                        <span>가. 아동&middot;청소년 준강제추행 / 나. 아동&middot;청소년 강제추행</span>
+                                        <span>검사 항소기각</span>
+                                    </li>
+                                    <li class="flex">
+                                        <span>강제추행</span>
+                                        <span>선고유예</span>
+                                    </li>
+                                    <li class="flex">
+                                        <span>카메라등이용촬영</span>
+                                        <span>검찰 불송치 결정(혐의없음)</span>
+                                    </li>
+                                    <li class="flex">
+                                        <span>가. 강간치상 / 나. 유사강간</span>
+                                        <span>검찰 불송치 결정(혐의없음)</span>
+                                    </li>
+                                    <li class="flex">
+                                        <span>나. 아동복지법위반 / 다. 아동복지법위반 / 라. 업무상횡령</span>
+                                        <span>혐의없음</span>
+                                    </li>
+                                    <li class="flex">
+                                        <span>가. 유사강간치상 / 다. 아동&middot;청소년 강간 / 라. 아동&middot;청소년 유사성행위</span>
+                                        <span>혐의없음</span>
+                                    </li>
+                                    <li class="flex">
+                                        <span>공연음란</span>
+                                        <span>조건부 기소유예</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

@@ -12,91 +12,197 @@
 }
 
 .container {
-    position:relative;
-    padding-top:136px;
-    padding-bottom:100px;
-    @include tablet {
-        padding-top:60px;
-    }
-    @include mobile {
-        padding-bottom:60px;
-    }
-    .breadcrumb {
-        padding:27px 0;
-        background:$disabled;
-        @include mobile {
-            padding:15px 0;
-        }
-        > ol {
-            display:flex;
-            @include contArea;
-            li {
-                position:relative;
-                padding-right:40px;
-                font-size:14px;
-                @include mobile {
-                    padding-right:30px;
-                    font-size:12px;
-                }
-                &::after {
-                    content:' ';
-                    position:absolute;
-                    top:50%;
-                    right:19px;
-                    width:6px;
-                    height:6px;
-                    margin-top:-3px;
-                    border:1px solid #bbb;
-                    border-top:none;
-                    border-right:none;
-                    transform:rotate(-135deg);
-                    @include mobile {
-                        right:14px;
-                    }
-                }
-                &:last-child::after {
-                    display:none;
-                }
-                a {
-                    display:block;
-                }
+    @for $i from 1 through 6 {
+        &.cate0#{$i} {
+            .page-title {
+                background-image:url('/images/bg/bg-subvisual0#{$i}.jpg');
             }
         }
     }
     .page-title {
-        @include contArea;
-        margin-top:80px;
-        text-align:center;
-        h2.title {
-            font-size:45px;
-            font-weight:500;
-        }
-        .desc {
-            margin-top:10px;
-            color:$cont;
-            font-size:16px;
-        }
+        position:relative;
+        display:flex;
+        flex-direction:column;
+        height:350px;
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-position:center;
+        z-index:10;
         @include tablet {
-            margin-top:60px;
+            height:300px;
         }
         @include mobile {
-            margin-top:40px;
-            h2.title {
+            height:220px;
+        }
+        h2.title {
+            flex:1;
+            padding-top:163px;
+            color:#fff;
+            text-align:center;
+            font-size:34px;
+            font-weight:500;
+            @include tablet {
+                padding-top:135px;
                 font-size:30px;
             }
-            .desc {
-                font-size:14px;
+            @include mobile {
+                padding-top:103px;
+                font-size:24px;
+            }
+        }
+        .sub-depth {
+            height:70px;
+            background:rgba(#000, 0.5);
+            @include tablet {
+                height:50px;
+            }
+            .area {
+                display:flex;
+                width:100%;
+                max-width:1280px;
+                margin:0 auto;
+                .home {
+                    display:block;
+                    width:70px;
+                    height:70px;
+                    background:rgba(#000, 0.3) url('/images/icon/icon-home.png') center no-repeat;
+                    @include tablet {
+                        width:50px;
+                        min-width:50px;
+                        height:50px;
+                        background-size:20px;
+                    }
+                }
+                .depth {
+                    position:relative;
+                    width:220px;
+                    @include mobile {
+                        flex:1;
+                    }
+                    &.open {
+                        .btn-toggle::after {
+                            transform:rotate(135deg);
+                            margin-top:-3px;
+                        }
+                        ul.lists {
+                            display:block;
+                        }
+                    }
+                    .btn-toggle {
+                        position:relative;
+                        display:block;
+                        width:100%;
+                        height:70px;
+                        padding:0 40px 0 20px;
+                        color:#fff;
+                        font-size:18px;
+                        line-height:70px;
+                        font-weight:500;
+                        @include tablet {
+                            height:50px;
+                            font-size:16px;
+                            line-height:50px;
+                        }
+                        @include mobile {
+                            padding:0 30px 0 10px;
+                            font-size:15px;
+                        }
+                        &::after {
+                            content:' ';
+                            position:absolute;
+                            top:50%;
+                            right:23px;
+                            width:9px;
+                            height:9px;
+                            margin-top:-6px;
+                            border:1px solid #fff;
+                            border-top:none;
+                            border-right:none;
+                            transform:rotate(-45deg);
+                            transition:all 0.1s ease-in-out;
+                            @include mobile {
+                                right:13px;
+                            }
+                        }
+                    }
+                    ul.lists {
+                        display:none;
+                        position:absolute;
+                        top:100%;
+                        left:0;
+                        right:0;
+                        li {
+                            background:#bbb;
+                            a {
+                                display:block;
+                                height:70px;
+                                padding:0 20px;
+                                color:#fff;
+                                font-size:18px;
+                                line-height:70px;
+                                @include tablet {
+                                    height:50px;
+                                    font-size:16px;
+                                    line-height:50px;
+                                }
+                                @include mobile {
+                                    height:40px;
+                                    padding:0 10px;
+                                    font-size:15px;
+                                    line-height:40px;
+                                }
+                                &.active {
+                                    background:#999;
+                                }
+                                &:hover {
+                                    background:#333;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
     .contents-area {
         @include contArea;
-        margin-top:80px;
+        padding-top:100px;
+        padding-bottom:100px;
         @include tablet {
-            margin-top:50px;
+            padding-top:70px;
         }
         @include mobile {
-            margin-top:30px;
+            padding-top:50px;
+            padding-bottom:60px;
+        }
+        h3.cont-title {
+            position:relative;
+            margin-bottom:60px;
+            padding-bottom:46px;
+            font-size:32px;
+            font-weight:500;
+            text-align:center;
+            &::after {
+                content:' ';
+                position:absolute;
+                left:50%;
+                bottom:0;
+                width:1px;
+                height:30px;
+                background:#333;
+            }
+            @include tablet {
+                margin-bottom:40px;
+                font-size:28px;
+            }
+            @include mobile {
+                margin-bottom:30px;
+                padding-bottom:40px;
+                font-size:22px;
+                &::after {
+                    height:26px;
+                }
+            }
         }
     }
 }

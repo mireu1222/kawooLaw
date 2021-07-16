@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="container" class="container cate05">
+            @@include('./layout/page-title.html', {
+                cate05 : '03'
+            })
+            <div class="contents-area">
+                <h3 class="cont-title">영상상담</h3>
+                <div class="sub0503">
+                    <h4 class="tit">변호사와의 무료 영상상담이 필요하시면 아래의 절차를 따라 주세요</h4>
+                    <a href="tel:02-6956-0279" class="btn btn-lg btn-point"><span>영상상담 전화예약 : (☏02-6956-0279)</span></a>
+                    <ol class="ol-lists">
+                        <li>
+                            <div class="inner">
+                                <p>PC 혹은 스마트폰 영상미팅 서비스인 "ZOOM" 설치</p>
+                                <a href="https://zoom.us/download" class="btn-zoom" title="ZOOM PC용 다운로드 페이지로 연결" target="_blank"><img src="/images/icon/icon-zoom.jpg" alt=""></a>
+                                <ul class="link-lists">
+                                    <li><a href="https://play.google.com/store/apps/details?id=us.zoom.videomeetings" class="store01" target="_blank"><span>google play</span></a></li>
+                                    <li><a href="https://apps.apple.com/us/app/id546505307" class="store02" target="_blank"><span>app store</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="inner">
+                                <p>ID "법률사무소 가우" 호출하기</p>
+                                <a href="" class="btn btn-lg btn-cont"><span>영상연결하기</span></a>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

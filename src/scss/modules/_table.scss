@@ -6,49 +6,31 @@
         margin:0 auto;
     }
     .tbl-title {
-        margin-bottom:20px;
-        @include font-lg;
-        font-weight:500;
+        margin-bottom:50px;
+        @include font-md;
+        text-align:center;
         word-break:keep-all;
-    }
-    .tbl-desc {
-        margin-bottom:15px;
-        @include font;
         @include mobile {
-            margin-bottom:5px;
-        }
-    }
-    .tbl-buttons {
-        position:absolute;
-        right:0;
-        bottom:100%;
-        margin-bottom:22px;
-        text-align:right;
-        font-size:0;
-        .btn {
-            min-width:175px;
-            margin-left:10px;
+            margin-bottom:20px;
         }
     }
     .essen-txt {
-        margin-bottom:10px;
-        color:$cont;
-        @include font-sm;
+        margin-bottom:15px;
         text-align:right;
-        @include mobile {
-            margin-bottom:5px;
-        }
+        font-size:15px;
+        color:#666;
         span {
             color:$red;
         }
-        &:first-child {
-            margin-top:0;
+        @include mobile {
+            margin-bottom:5px;
+            font-size:13px;
         }
     }
     .table {
         width:100%;
-        table-layout:fixed;
         &.notice-table {
+            table-layout:fixed;
             .col1 {
                 width:120px;
                 @include mobile {
@@ -72,11 +54,13 @@
                         height:60px;
                         border-bottom:1px solid $border;
                         background:$disabled;
-                        @include font;
+                        font-size:18px;
                         font-weight:500;
                         text-align:center;
+                        vertical-align:middle;
                         @include mobile {
                             height:50px;
+                            font-size:16px;
                         }
                     }
                 }
@@ -98,7 +82,7 @@
                             max-width:100%;
                             @include textEllipsis;
                             &.new {
-                                padding-right:30px;
+                                padding-right:25px;
                                 &::after {
                                     content:'N';
                                     position:absolute;
@@ -116,7 +100,7 @@
                                 }
                             }
                             &.file {
-                                padding-right:30px;
+                                padding-right:25px;
                                 &::before {
                                     content:' ';
                                     position:absolute;
@@ -125,11 +109,11 @@
                                     width:20px;
                                     height:20px;
                                     margin-top:-10px;
-                                    background:url('/images/icon/icon-clip.png') center no-repeat;
+                                    background:url('/images/icon/icon-file.png') center no-repeat;
                                 }
                             }
                             &.new.file {
-                                padding-right:55px;
+                                padding-right:50px;
                                 &::before {
                                     right:25px;
                                 }
@@ -140,12 +124,6 @@
             }
         }
         &.row-table {
-            .col1 {
-                width:156px;
-                @include mobile {
-                    width:100px;
-                }
-            }
             tbody {
                 tr {
                     &:first-child {
@@ -155,37 +133,42 @@
                         }
                     }
                     th {
-                        height:60px;
-                        padding:13px 25px;
+                        height:70px;
+                        padding:15px 40px;
                         border-bottom:1px solid $border;
                         background:$disabled;
                         @include font;
+                        color:#333;
                         font-weight:500;
-                        text-align:left;
+                        text-align:center;
                         vertical-align:middle;
-                        @include mobile {
-                            padding:13px 10px;
-                        }
+                        white-space:nowrap;
                         &.essen {
                             &::after {
                                 content:'*';
                                 color:$red;
                             }
                         }
+                        @include mobile {
+                            height:60px;
+                            padding:10px;
+                        }
                     }
                     td {
-                        height:60px;
-                        padding:13px 25px 13px 15px;
+                        height:70px;
+                        padding:15px 40px;
                         border-bottom:1px solid $border;
-                        @include font-lg;
+                        @include font;
+                        color:#666;
                         text-align:left;
                         vertical-align:middle;
-                        @include mobile {
-                            padding:13px 10px;
-                        }
                         textarea.form-control {
                             height:180px;
                             min-height:180px;
+                        }
+                        @include mobile {
+                            height:60px;
+                            padding:10px;
                         }
                     }
                 }

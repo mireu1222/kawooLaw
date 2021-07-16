@@ -1,0 +1,333 @@
+/* 24시 비대면상담 */
+.sub0501 {
+    h4.tit {
+        margin-bottom:60px;
+        @include font-title;
+        font-weight:500;
+        text-align:center;
+        @include tablet {
+            margin-bottom:40px;
+        }
+        @include mobile {
+            margin-bottom:20px;
+        }
+    }
+    .box {
+        margin-bottom:50px;
+        @include clearfix;
+        &:last-child {
+            margin-bottom:0;
+        }
+        @include mobile {
+            margin-bottom:40px;
+        }
+        > h5.tit {
+            float:left;
+            @include calcs(width, 240px, 1280px);
+            height:70px;
+            background:$point;
+            color:#fff;
+            text-align:center;
+            font-size:20px;
+            line-height:70px;
+            font-weight:500;
+            @include tablet {
+                float:none;
+                width:240px;
+            }
+            @include mobile {
+                width:100%;
+                height:50px;
+                font-size:18px;
+                line-height:50px;
+            }
+        }
+        > .flex {
+            display:flex;
+            margin-bottom:40px;
+            @include calcs(margin-left, 260px, 1280px);
+            @include tablet {
+                margin-bottom:30px;
+                margin-left:0;
+            }
+            @include mobile {
+                display:block;
+            }
+            &:last-child {
+                margin-bottom:0;
+            }
+            &.type2 {
+                .col {
+                    flex:1;
+                    width:auto;
+                    &:first-child {
+                        margin-right:0;
+                    }
+                }
+            }
+            .col {
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                width:calc((100% - 60px) / 4);
+                margin-left:15px;
+                padding:19px 10px;
+                border:1px solid $border;
+                word-break:keep-all;
+                @include mobile {
+                    width:100%;
+                    margin-top:5px;
+                    margin-left:0;
+                    padding:10px 5px;
+                }
+                &:first-child {
+                    margin-left:0;
+                    margin-right:15px;
+                }
+                &.line {
+                    position:relative;
+                    flex-direction:column;
+                    padding:0;
+                    border:none;
+                    &::after {
+                        content:' ';
+                        position:absolute;
+                        top:50%;
+                        left:100%;
+                        margin-top:-10px;
+                        margin-left:8px;
+                        border-top:10px solid transparent;
+                        border-bottom:10px solid transparent;
+                        border-left:14px solid $border;
+                    }
+                    .row {
+                        padding:19px 10px;
+                    }
+                    @include mobile {
+                        flex-direction:row;
+                        margin-bottom:20px;
+                        &::after {
+                            top:100%;
+                            left:50%;
+                            border-top:8px solid $border;
+                            border-left:10px solid transparent;
+                            border-right:10px solid transparent;
+                            margin-left:-10px;
+                            margin-top:7px;
+                        }
+                        .row {
+                            flex:1;
+                            margin-top:0;
+                            margin-left:5px;
+                            padding:10px 5px;
+                            &:first-child {
+                                margin-left:0;
+                            }
+                        }
+                    }
+                }
+                h6.tit {
+                    margin:-19px -10px auto;
+                    padding:14px 10px;
+                    background:#f5f5f5;
+                    color:#666;
+                    @include font-md;
+                    font-weight:500;
+                    text-align:center;
+                    & + p {
+                        margin-bottom:auto;
+                    }
+                    @include mobile {
+                        margin:-10px -5px 10px;
+                        padding:8px 5px;
+                    }
+                }
+                .row {
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    margin-top:15px;
+                    border:1px solid $border;
+                    &:first-child {
+                        margin-top:0;
+                    }
+                }
+                p {
+                    text-align:center;
+                    color:#666;
+                    @include font-md;
+                    small {
+                        display:block;
+                        @include font;
+                        color:#999;
+                    }
+                    .link-point {
+                        display:block;
+                        margin-top:25px;
+                        text-decoration:underline;
+                        font-size:16px;
+                        line-height:1;
+                        @include mobile {
+                            margin-top:10px;
+                            font-size:14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sub0503 {
+    text-align:center;
+    > h4.tit {
+        margin-bottom:30px;
+        @include font-md;
+        @include mobile {
+            margin-bottom:15px;
+        }
+    }
+    .ol-lists {
+        display:flex;
+        margin-top:90px;
+        @include mobile {
+            display:block;
+            margin-top:40px;
+        }
+        > li {
+            flex:1;
+            position:relative;
+            margin-left:20px;
+            padding-top:25px;
+            @include mobile {
+                margin-left:0;
+                margin-top:20px;
+                padding-top:15px;
+            }
+            &:first-child {
+                margin-left:0;
+                margin-top:0;
+                &::before {
+                    content:'1';
+                }
+            }
+            &:nth-child(2)::before {
+                content:'2';
+            }
+            &::before {
+                position:absolute;
+                top:0;
+                left:50%;
+                width:50px;
+                height:50px;
+                margin-left:-25px;
+                border-radius:50%;
+                background:$cont;
+                color:#fff;
+                font-size:20px;
+                font-weight:500;
+                text-align:center;
+                line-height:50px;
+                @include mobile {
+                    width:30px;
+                    height:30px;
+                    margin-left:-15px;
+                    font-size:16px;
+                    line-height:30px;
+                }
+            }
+            .inner {
+                display:flex;
+                flex-direction:column;
+                height:100%;
+                padding:40px 12px 25px;
+                background:#f5f5f5;
+                @include mobile {
+                    padding:20px 10px 15px;
+                }
+                p {
+                    @include font-md;
+                    font-weight:500;
+                    word-break:keep-all;
+                }
+                .btn-zoom {
+                    display:block;
+                    width:185px;
+                    height:50px;
+                    margin:20px auto;
+                    padding-top:10px;
+                    background:#4686dc;
+                    text-align:center;
+                    @include mobile {
+                        margin:10px auto;
+                    }
+                }
+                .link-lists {
+                    width:100%;
+                    max-width:330px;
+                    margin:0 auto;
+                    font-size:0;
+                    text-align:center;
+                    li {
+                        display:inline-block;
+                        vertical-align:top;
+                        width:calc((100% - 5px) / 2);
+                        margin-left:5px;
+                        &:first-child {
+                            margin-left:0;
+                        }
+                        a {
+                            display:block;
+                            width:100%;
+                            height:50px;
+                            border:1px solid $border;
+                            background:#fff;
+                            font-size:18px;
+                            font-weight:500;
+                            line-height:48px;
+                            text-align:center;
+                            &::before {
+                                content:' ';
+                                display:inline-block;
+                                vertical-align:top;
+                                width:32px;
+                                height:32px;
+                                margin-top:8px;
+                                margin-right:4px;
+                            }
+                            &.store01::before {
+                                background-image:url('/images/icon/icon-app1.jpg');
+                            }
+                            &.store02::before {
+                                background-image:url('/images/icon/icon-app2.jpg');
+                            }
+                        }
+                    }
+                }
+                .btn.btn-cont {
+                    margin:auto;
+                    width:245px;
+                    @include mobile {
+                        margin-top:10px;
+                    }
+                    &::before {
+                        content:' ';
+                        display:inline-block;
+                        vertical-align:top;
+                        width:34px;
+                        height:34px;
+                        margin-top:12px;
+                        margin-right:10px;
+                        background:url('/images/icon/icon-cnt.png');
+                        @include mobile {
+                            width:24px;
+                            height:24px;
+                            margin-top:12px;
+                            background-size:100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

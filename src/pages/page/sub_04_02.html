@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="container" class="container cate04">
+            @@include('./layout/page-title.html', {
+                cate04 : '02'
+            })
+            <div class="contents-area">
+                <h3 class="cont-title">변호사 119</h3>
+                <div class="sub04">
+                    <div class="num-cont">
+                        <span class="bg bg02" aria-hidden="true"></span>
+                        <ul>
+                            <li>"변호사 119"는 사건을 정식 수임하기 이전의 상태이지만, 긴급상황에 처하여 변호사를 필요로 하는 고객을 위하여 마련한 24시간 법률서비스입니다.</li>
+                            <li>"긴급 체포된 경찰서 또는 구치소 접견", "자동차사고", "음주운전 체포"등 긴급히 변호사의 도움이 필요할 때 Hot Line(☏02-6956-0279)으로 연락 하십시오. 언제 어디서든 든든한 법률 조력자가 되어드리겠습니다.</li>
+                            <li class="no-num"><a href="tel:02-6956-0279" class="btn btn-lg btn-point"><span>변호사 119 전화하기</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

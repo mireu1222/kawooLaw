@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="container" class="container cate02">
+            @@include('./layout/page-title.html', {
+                cate02 : '04'
+            })
+            <div class="contents-area">
+                <h3 class="cont-title">개인회생&middot;파산</h3>
+                <div class="sub02">
+                    <h4 class="tit bg04">법무법인 가우는 신뢰할 수 있는 동반자로서 실효성 있는 법률서비스를 적시에 제공합니다.</h4>
+                    <div class="text-cont">
+                        <div class="box">
+                            <h5 class="tit">개인회생&middot;파산</h5>
+                            <p class="desc">
+                                컨텐츠 수급 필요
+                            </p>
+                        </div>
+                        <div class="box">
+                            <h5 class="tit">업무소개</h5>
+                            <ul class="bullet-list">
+                                <li>사단계의 법률자문 및 변호</li>
+                                <li>구속영장실질심사의 변호</li>
+                                <li>구속적부심사의 변호</li>
+                                <li>공판단계의 변호</li>
+                                <li>보석청구사건의 변호</li>
+                                <li>항소심, 상고심 사건의 변호</li>
+                                <li>재심사건의 변호</li>
+                                <li>고소사건 대리 및 재정신청사건 대리</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

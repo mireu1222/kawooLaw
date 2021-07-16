@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="container" class="container cate05">
+            @@include('./layout/page-title.html', {
+                cate05 : '02'
+            })
+            <div class="contents-area">
+                <h3 class="cont-title">온라인상담</h3>
+                @@include('./modules/input-table.html')
+                <div class="btn-group">
+                    <button type="button" class="btn btn-lg btn-point"><span>문의 등록</span></button>
+                </div>
+            </div>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

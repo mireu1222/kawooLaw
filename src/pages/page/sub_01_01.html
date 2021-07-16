@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="container" class="container cate01">
+            @@include('./layout/page-title.html', {
+                cate01 : '01'
+            })
+            <div class="contents-area">
+                <h3 class="cont-title">법무법인 가우</h3>
+                <div class="sub0101">
+                    <span class="thumb"><img src="/images/img/img-sub0101.jpg" alt=""></span>
+                    <div class="text">
+                        <p class="tit">
+                            <small>KAWOO</small>
+                            "가우"는 '아름다운 벗'입니다.
+                        </p>
+                        <p class="desc">항상 고객의 마음으로 얘기하고,<br>고객의 입장에서 일하고,<br>고객이 원하시는 결과를 얻을 때까지 고객과 늘 동행하는 '아름다운 벗(佳友)'이 되겠습니다.</p>
+                        <p class="tit">법률 서비스의 문턱을 낮추었습니다.</p>
+                        <p class="desc">24시간 비대면, 무료상담(즉석 영상상담)과, 긴급상황에 대처하는 "변호사 119", "개인전담변호사", "나홀로 송무"등 차별화된 법률서비스를 운영합니다.</p>
+                    </div>
+                    <ul class="img-wrap">
+                        <li class="big"><img src="/images/img/img-sub0101-1.jpg" alt=""></li>
+                        <li><img src="/images/img/img-sub0101-2.jpg" alt=""></li>
+                        <li><img src="/images/img/img-sub0101-3.jpg" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="container" class="container cate01">
+            @@include('./layout/page-title.html', {
+                cate01 : '04'
+            })
+            <div class="contents-area">
+                <h3 class="cont-title">찾아오시는 길</h3>
+                <div class="sub0104">
+                    <div class="map-wrap">
+                        <div id="daumRoughmapContainer1626336690680" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+                    </div>
+                    <div class="addr">
+                        <p class="tit">법무법인가우</p>
+                        <p class="desc">(03149)서울시 종로구 인사동5길 42, 12층(관훈동, 종로빌딩)</p>
+                    </div>
+                    <ul class="contact-lists">
+                        <li>
+                            <span class="blind">전화</span>
+                            <p>02-6956-0297</p>
+                        </li>
+                        <li>
+                            <span class="blind">팩스</span>
+                            <p>02-6956-0294</p>
+                        </li>
+                        <li>
+                            <span class="blind">이메일</span>
+                            <p>kwjmj@kawoolaw.com</p>
+                        </li>
+                    </ul>
+                    <ul class="how-lists">
+                        <li>
+                            <p class="tit">주차</p>
+                            <p class="desc">종로빌딩 1층 및 지하(기계식) '방문자 주차 가능'<br>(2시간 무료주차지원)</p>
+                        </li>
+                        <li>
+                            <p class="tit">대중교통 이용방법</p>
+                            <p class="desc bar">지하철 1호선 종각역 3-1번, 3번출구 나와서 도보 3분 (240m)</p>
+                            <p class="desc bar">지하철 3호선 안국역 6번, 5번출구 나와서 도보 8분 (530m)</p>
+                            <p class="desc bar">지하철 5호선 종로3가역 5번출구 나와서 도보 8분 (570m)</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+    <script charset="UTF-8">
+        new daum.roughmap.Lander({
+            "timestamp" : "1626336690680",
+            "key" : "26n3o",
+        }).render();
+    </script>
+</body>
+</html>

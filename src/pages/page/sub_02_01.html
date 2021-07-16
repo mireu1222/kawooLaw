@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="container" class="container cate02">
+            @@include('./layout/page-title.html', {
+                cate02 : '01'
+            })
+            <div class="contents-area">
+                <h3 class="cont-title">부동산 경매</h3>
+                <div class="sub02">
+                    <h4 class="tit bg01">법무법인 가우는 신뢰할 수 있는 동반자로서 실효성 있는 법률서비스를 적시에 제공합니다.</h4>
+                    <div class="text-cont">
+                        <div class="box">
+                            <h5 class="tit">부동산 경매</h5>
+                            <p class="desc">
+                                모든 재건축, 재개발사업은 수년간에 걸쳐 진행되므로 조합과 변호사간의 신뢰가 다른 어느 분야보다 중요합니다.<br>
+                                법무법인 가우는 여러 조합의 고문변호사로서 꾸준한 자문 업무를 수행하는 전문변호사가 재직 중이며, 재건축 및 재개발 사업에 관한 조합의 설립부터 청산까지 단계별 자문 및 소송을 수행합니다.<br>
+                                또한 조합관련 형사사건 및 행정사건에 있어서도 다수 성공적인 수행경력을 갖고 있습니다.
+                            </p>
+                        </div>
+                        <div class="box">
+                            <h5 class="tit">업무소개</h5>
+                            <ul class="bullet-list">
+                                <li>대여금, 약정금 등 청구소송</li>
+                                <li>소유권이전, 근저당권말소 등 부동산 관련 소송</li>
+                                <li>각종 손해배상 청구소송</li>
+                                <li>사해행위취소 소송의 소제기 및 응소</li>
+                                <li>재개발&middot;재건축 조합 관련 소송</li>
+                                <li>공사대금 또는 지체상금 청구 등 각종 건설 관련 소송</li>
+                                <li>대규모 부동산 개발 및 투자 관련 소송</li>
+                                <li>청구이의, 배당이의, 제3자이의 등 민사집행 관련 소송의 소제기 및 응소</li>
+                                <li>공사중지가처분, 업무집행정지 가처분, 부동산 및 채권 가압류 등 각종 보전처분</li>
+                            </ul>
+                        </div>
+                        <div class="box">
+                            <h5 class="tit">주요사례</h5>
+                            <dl class="dl-list">
+                                <dt>[손해배상]</dt>
+                                <dd>토지 명의수탁자가 실소유자에게 반환을 거부해 손해배상책임이 발생했더라도 그 동안 명의신탁토지의 가치가 상승하였다면 재산상 손해를 인정할 수 없다고 본 사례</dd>
+                                <dd>부동산업자가 A씨에게 사실과 달리 경매대상 부동산을 낙찰받을 경우 이를 매수할 매수자가 있다고 확정적으로 이야기 하여 A씨가 경매절차에서 실제보다 높은 가격에 부동산을 낙찰 받은 사안에서 부동산업자의 손해배상책임을 인정한 사례</dd>
+                                <dd>부동산 중개업자가 의뢰인 및 거래상대방에게 매물에 대한 조사&middot;설명을 다하지 않아 거래상대방이 위 매물에 대한 매매계약 체결로 손해를 입은 경우, 손해배상책임을 인정한 사례</dd>
+                            </dl>
+                            <dl class="dl-list">
+                                <dt>[조합 결의]</dt>
+                                <dd>택시조합은 설립 당시부터 조합원총회 대신 대의원총회의 결의로 정관변경을 할 수 있다고 규정해왔고 17회에 걸쳐 대의원총회 결의로 정관을 변경해왔으므로, 대의원총회에서 개정한 정관을 기초로 한 이사장 선거 역시 유효하다고 판단한 사례</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

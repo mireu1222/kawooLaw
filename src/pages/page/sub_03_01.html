@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="container" class="container cate03">
+            @@include('./layout/page-title.html', {
+                cate03 : '01'
+            })
+            <div class="contents-area">
+                <h3 class="cont-title">대표변호사</h3>
+                <div class="lawyer-view">
+                    <div class="photo"><img src="/images/img/img-pp1.jpg" alt=""></div>
+                    <div class="cont">
+                        <div class="head">
+                            <h4 class="name"><small>대표변호사</small>이 경 환</h4>
+                            <dl class="mail">
+                                <dt>E-MAIL</dt>
+                                <dd>kjhoon9498@naver.com</dd>
+                            </dl>
+                        </div>
+                        <div class="body">
+                            <div class="sect">
+                                <h5 class="tit">학력</h5>
+                                <ul class="lists">
+                                    <li>창원경상고등학교(1985. 졸업)</li>
+                                    <li>연세대학교 정치외교학과(1992. 졸업)</li>
+                                    <li>연세대학교 법학과(1994. 졸업)</li>
+                                    <li>건국대학교 부동산대학원 부동산학과(2007. 수료)</li>
+                                </ul>
+                            </div>
+                            <div class="sect">
+                                <h5 class="tit">경력</h5>
+                                <ul class="lists">
+                                    <li>현 한국납세자연맹 법률지원단장</li>
+                                    <li>현 대한변호사협회 재개발재건축 법률지원변호사단 상임위원</li>
+                                    <li>현 이데일리TV 부동산종합뉴스 자문변호사</li>
+                                    <li>현 RTN부동산TV 부동산뉴스 자문변호사</li>
+                                    <li>전 나사렛대학교 부동산학과 겸임교수</li>
+                                    <li>전 건국대학교 부동산학과 외래교수</li>
+                                    <li>전 윈앤윈 대표 및 구성원 변호사</li>
+                                    <li>전 가우법률사무소 대표변호사</li>
+                                    <li>전 서울특별시 자문 및 수송수행 변호사</li>
+                                    <li>전 SBS TV로펌 솔로문 자문변호사</li>
+                                </ul>
+                            </div>
+                            <div class="sect">
+                                <h5 class="tit">공공기관 위촉현황</h5>
+                                <ul class="lists">
+                                    <li>전 강남구청 특별24시 비대면상담</li>
+                                    <li>전 송파구청 민원즉심위원회 위원</li>
+                                    <li>전 한국주택금융공사 비상임이사</li>
+                                    <li>현 인제강제동원피해자 지원재단 감사</li>
+                                    <li>현 한국자산관리공사 고문변호사</li>
+                                    <li>한국주택금융공사 구상금 등 사건 소송진행</li>
+                                    <li>신용보증기금 구상금 등 사건 소송진행</li>
+                                </ul>
+                            </div>
+                            <div class="sect">
+                                <h5 class="tit">저서 및 논문</h5>
+                                <ul class="lists">
+                                    <li>중국부동산 생생리포트(공저, 2008.)</li>
+                                    <li>한국의 벤처회사법(공저, 2000.8)</li>
+                                    <li>기술투자의 법적쟁점(공저, 2000.9)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

@@ -44,20 +44,20 @@
 // bullet list
 .bullet-list {
     li {
-        margin-top:5px;
-        padding-left:20px;
-        color:$cont;
-        font-size:15px;
-        line-height:22px;
+        margin-top:3px;
+        padding-left:10px;
+        color:#666;
+        @include font;
+        word-break:keep-all;
         &:first-child {
             margin-top:0;
         }
         &::before {
-            content:'※';
+            content:'-';
             display:inline-block;
             vertical-align:top;
-            width:20px;
-            margin-left:-20px;
+            width:10px;
+            margin-left:-10px;
         }
         sup {
             display:inline-block;
@@ -66,17 +66,25 @@
             line-height:1;
         }
     }
-    &.dot-type {
-        li {
-            padding-left:10px;
-            &::before {
-                content:' ';
-                width:4px;
-                height:4px;
-                margin:9px 6px 0 -10px;
-                border-radius:50%;
-                background:$cont;
-            }
+}
+
+dl.dl-list {
+    @include font;
+    word-break:keep-all;
+    dt {
+        color:#333;
+        font-weight:500;
+    }
+    dd {
+        margin-top:3px;
+        padding-left:10px;
+        color:#666;
+        &::before {
+            content:'-';
+            display:inline-block;
+            vertical-align:top;
+            width:10px;
+            margin-left:-10px;
         }
     }
 }
